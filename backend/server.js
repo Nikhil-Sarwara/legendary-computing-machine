@@ -18,9 +18,13 @@ app.use("/api/bins", require("./routes/bins"));
 
 // Basic root route
 app.get("/", (req, res) => {
-  res.send("Copman Sensor Data Backend is running! 📈");
+  res.send("Company Sensor Data Backend is running! 📈");
 });
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log(`Server started on port ${PORT} 🚀`));
+app.listen(PORT, () =>
+  console.log(
+    `Server started on port ${PORT} 🚀 here: http://localhost:${PORT}/`
+  )
+);
